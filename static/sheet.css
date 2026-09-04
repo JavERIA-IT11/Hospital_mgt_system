@@ -1,0 +1,454 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #eef6f7;
+
+    margin: 0;
+
+    padding: 30px;
+
+}
+
+
+h1 {
+
+    text-align: center;
+
+    color: #245b63;
+
+}
+
+
+#searchBox {
+
+    display: flex;
+
+    width: 650px;
+
+    margin: 25px auto;
+
+}
+
+
+#searchBox input {
+
+    flex: 1;
+
+    padding: 13px;
+
+    border: 2px solid #9cc7cc;
+
+    border-radius: 8px 0 0 8px;
+
+    font-size: 15px;
+
+}
+
+
+#searchBox button {
+
+    padding: 13px 25px;
+
+    background: #4f9da6;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 0 8px 8px 0;
+
+    cursor: pointer;
+
+}
+
+
+#mainMenu {
+
+    width: 500px;
+
+    margin: 35px auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+}
+
+
+#mainMenu button {
+
+    padding: 18px;
+
+    font-size: 16px;
+
+    background: white;
+
+    color: #245b63;
+
+    border: 2px solid #8fc3c9;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+
+
+#mainMenu button:hover {
+
+    background: #d9eff1;
+
+}
+
+
+#patientsection,
+#doctorsection,
+#appointmentsection,
+#billingsection {
+
+    display: none;
+
+}
+
+
+#patientsection h2 {
+
+    color: #245b63;
+
+}
+
+
+#doctorsection h2 {
+
+    color: #51467a;
+
+}
+
+
+#appointmentsection h2 {
+
+    color: #426b40;
+
+}
+
+
+#billingsection h2 {
+
+    color: #80643d;
+
+}
+
+
+.subMenu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    width: 250px;
+
+    margin-top: 15px;
+
+}
+
+
+#patientsection .subMenu button {
+
+    background: #dceff2;
+
+    color: #245b63;
+
+    border: 2px solid #8fc3c9;
+
+    border-radius: 8px;
+
+    padding: 11px;
+
+    cursor: pointer;
+
+}
+
+
+#doctorsection .subMenu button {
+
+    background: #e5e0f5;
+
+    color: #51467a;
+
+    border: 2px solid #aaa0d0;
+
+    border-radius: 8px;
+
+    padding: 11px;
+
+    cursor: pointer;
+
+}
+
+
+.contentBox {
+
+    width: 400px;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 12px;
+
+}
+
+
+.contentBox h3 {
+
+    margin-top: 0;
+
+}
+
+
+#patientsection .contentBox {
+
+    border: 2px solid #8fc3c9;
+
+}
+
+
+#patientsection .contentBox h3 {
+
+    color: #245b63;
+
+}
+
+
+#patientsection .contentBox input {
+
+    border: 2px solid #b8dce0;
+
+}
+
+
+#doctorsection .contentBox {
+
+    border: 2px solid #aaa0d0;
+
+}
+
+
+#doctorsection .contentBox h3 {
+
+    color: #51467a;
+
+}
+
+
+#doctorsection .contentBox input {
+
+    border: 2px solid #c9c2e2;
+
+}
+
+
+#appointmentsection .contentBox {
+
+    border: 2px solid #a7c9a3;
+
+}
+
+
+#appointmentsection .contentBox h3 {
+
+    color: #426b40;
+
+}
+
+
+#appointmentsection .contentBox input {
+
+    border: 2px solid #c1dfbd;
+
+}
+
+
+#billingsection .contentBox {
+
+    border: 2px solid #d5bd91;
+
+}
+
+
+#billingsection .contentBox h3 {
+
+    color: #80643d;
+
+}
+
+
+#billingsection .contentBox input {
+
+    border: 2px solid #e5d4b5;
+
+}
+
+
+.formFields {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 350px;
+
+    gap: 6px;
+
+}
+
+
+.formFields label {
+
+    margin-top: 8px;
+
+    font-weight: bold;
+
+}
+
+
+.formFields input {
+
+    padding: 9px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    background: white;
+
+}
+
+
+.contentBox label {
+
+    display: block;
+
+    margin-top: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.contentBox input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 9px;
+
+    margin-top: 5px;
+
+    border-radius: 6px;
+
+    background: white;
+
+    font-size: 14px;
+
+}
+
+
+.contentBox button {
+
+    margin-top: 15px;
+
+    padding: 10px 18px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+}
+
+
+button {
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+#patientregistersection,
+#patientsearchsection,
+#doctorregistersection,
+#doctorsearchsection {
+
+    display: none;
+
+}
+
+
+#patientresult {
+
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #f5fbfc;
+
+    border: 1px solid #b8dce0;
+
+    border-radius: 8px;
+
+}
+
+
+#patientresult h3 {
+
+    color: #245b63;
+
+}
+
+
+#patientresult p {
+
+    margin: 10px 0;
+
+}
+
+
+#doctorresult {
+
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #f8f6fd;
+
+    border: 1px solid #c9c2e2;
+
+    border-radius: 8px;
+
+}
+
+
+#doctorresult h3 {
+
+    color: #51467a;
+
+}
+
+
+#doctorresult p {
+
+    margin: 10px 0;
+
+}

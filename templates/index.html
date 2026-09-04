@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sheet.css') }}">
+</head>
+
+<body>
+
+```
+<div id="homePage">
+
+    <h1>HOSPITAL MANAGEMENT SYSTEM</h1>
+
+    <div id="searchBox">
+
+        <input type="text"
+            placeholder="Search patient or doctor">
+
+        <button id="searchbutton">
+            SEARCH
+        </button>
+
+    </div>
+
+    <div id="mainMenu">
+
+        <button id="patientbutton">
+            PATIENT
+        </button>
+
+        <button id="doctorbutton">
+            DOCTOR
+        </button>
+
+        <button id="appointmentbutton">
+            APPOINTMENT
+        </button>
+
+        <button id="billingbutton">
+            BILLING
+        </button>
+
+    </div>
+
+</div>
+
+<section id="patientsection">
+
+    <h2>PATIENT</h2>
+
+    <div class="subMenu">
+
+        <button id="registerpatient">
+            Register New Patient
+        </button>
+
+        <button id="searchpatient">
+            Search Patient
+        </button>
+
+    </div>
+
+    <div id="patientregistersection" class="contentBox">
+
+        <h3>REGISTER NEW PATIENT</h3>
+
+        <div class="formFields">
+
+            <label>Patient ID</label>
+            <input type="text">
+
+            <label>Patient Name</label>
+            <input type="text">
+
+            <label>Patient Contact</label>
+            <input type="text">
+
+            <label>Patient Age</label>
+            <input type="number">
+
+            <label>Patient Gender</label>
+            <input type="text">
+
+            <label>Patient Address</label>
+            <input type="text">
+
+        </div>
+
+        <button id="savepatient">
+            Save Patient
+        </button>
+
+    </div>
+
+    <div id="patientsearchsection" class="contentBox">
+
+        <h3>SEARCH PATIENT</h3>
+
+        <label>Patient ID or Name</label>
+
+        <input type="text"
+            id="patientsearchinput"
+            placeholder="Enter Patient ID or Name">
+
+        <button id="searchpatientbutton">
+            Search
+        </button>
+
+        <div id="patientresult">
+
+            <h3>PATIENT DETAILS</h3>
+
+            <p>
+                <strong>Patient ID:</strong>
+                <span id="resultpatientid"></span>
+            </p>
+
+            <p>
+                <strong>Name:</strong>
+                <span id="resultpatientname"></span>
+            </p>
+
+            <p>
+                <strong>Contact:</strong>
+                <span id="resultpatientcontact"></span>
+            </p>
+
+            <p>
+                <strong>Age:</strong>
+                <span id="resultpatientage"></span>
+            </p>
+
+            <p>
+                <strong>Gender:</strong>
+                <span id="resultpatientgender"></span>
+            </p>
+
+            <p>
+                <strong>Address:</strong>
+                <span id="resultpatientaddress"></span>
+            </p>
+
+            <h3>PATIENT HISTORY</h3>
+
+            <p id="patienthistory">
+                No patient history available.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="doctorsection">
+
+    <h2>DOCTOR</h2>
+
+    <div class="subMenu">
+
+        <button id="registerdoctor">
+            Register New Doctor
+        </button>
+
+        <button id="searchdoctor">
+            Search Doctor
+        </button>
+
+    </div>
+
+    <div id="doctorregistersection" class="contentBox">
+
+        <h3>REGISTER NEW DOCTOR</h3>
+
+        <div class="formFields">
+
+            <label>Doctor ID</label>
+            <input type="text">
+
+            <label>Doctor Name</label>
+            <input type="text">
+
+            <label>Doctor Contact</label>
+            <input type="text">
+
+            <label>Doctor Email</label>
+            <input type="email">
+
+            <label>Specialization</label>
+            <input type="text">
+
+            <label>Department</label>
+            <input type="text">
+
+        </div>
+
+        <button id="savedoctor">
+            Save Doctor
+        </button>
+
+    </div>
+
+    <div id="doctorsearchsection" class="contentBox">
+
+        <h3>SEARCH DOCTOR</h3>
+
+        <label>Doctor ID or Name</label>
+
+        <input type="text"
+            id="doctorsearchinput"
+            placeholder="Enter Doctor ID or Name">
+
+        <button id="searchdoctorbutton">
+            Search
+        </button>
+
+        <div id="doctorresult">
+
+            <h3>DOCTOR DETAILS</h3>
+
+            <p>
+                <strong>Doctor ID:</strong>
+                <span id="resultdoctorid"></span>
+            </p>
+
+            <p>
+                <strong>Name:</strong>
+                <span id="resultdoctorname"></span>
+            </p>
+
+            <p>
+                <strong>Contact:</strong>
+                <span id="resultdoctorcontact"></span>
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                <span id="resultdoctoremail"></span>
+            </p>
+
+            <p>
+                <strong>Specialization:</strong>
+                <span id="resultdoctorspecialization"></span>
+            </p>
+
+            <p>
+                <strong>Department:</strong>
+                <span id="resultdoctordepartment"></span>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="appointmentsection">
+
+    <h2>APPOINTMENT</h2>
+
+    <div class="contentBox">
+
+        <h3>BOOK APPOINTMENT</h3>
+
+        <div class="formFields">
+
+            <label>Patient Name</label>
+            <input type="text">
+
+            <label>Doctor Name</label>
+            <input type="text">
+
+            <label>Appointment Date</label>
+            <input type="date">
+
+            <label>Appointment Time</label>
+            <input type="time">
+
+            <label>Reason</label>
+            <input type="text">
+
+        </div>
+
+        <button id="bookappointment">
+            Book Appointment
+        </button>
+
+    </div>
+
+</section>
+
+<section id="billingsection">
+
+    <h2>BILLING</h2>
+
+    <div class="contentBox">
+
+        <h3>BILLING / PAYMENT</h3>
+
+        <div class="formFields">
+
+            <label>Patient Name</label>
+            <input type="text">
+
+            <label>Patient ID</label>
+            <input type="text">
+
+            <label>Doctor Charges</label>
+            <input type="number">
+
+            <label>Medicine Charges</label>
+            <input type="number">
+
+            <label>Other Charges</label>
+            <input type="number">
+
+            <label>Total Amount</label>
+            <input type="number">
+
+        </div>
+
+        <button id="makepayment">
+            Make Payment
+        </button>
+
+    </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+```
+
+</body>
+
+</html>
